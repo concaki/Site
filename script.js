@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnPesquisar = document.getElementById('btnpesquisar');
     const btnLimpar = document.getElementById('btnlimpar'); // Adicionando referência ao botão Limpar
 
-    const apiKey = '9fb86db190a370246325de823dcb86928091858bd2a49d0646fd07a0ae7544cca50e7d52'; // Substitua 'SUA_CHAVE_DE_API_AQUI' pela sua chave de API
+    const apiKey = process.env.API_KEY; // Substitua 'SUA_CHAVE_DE_API_AQUI' pela sua chave de API
 
     btnPesquisar.addEventListener('click', async function(event) {
         event.preventDefault(); // Evita o comportamento padrão do botão
@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
         const SKU = document.getElementById('SKU').value;
 
         const url = `https://bling.com.br/Api/v2/produto/${SKU}/json/&apikey=${apiKey}&estoque=S&imagem=S`; // URL da requisição
-        console.log('URL da requisição:', url); // Imprime a URL da requisição no console
+        /* console.log('URL da requisição:', url); // Imprime a URL da requisição no console */
 
         try {
             const response = await fetch(url); // Faz a requisição
             const data = await response.json(); // Converte a resposta para JSON
 
-            console.log('Retorno JSON:', data); // Imprime o retorno JSON no console
+            /*console.log('Retorno JSON:', data); // Imprime o retorno JSON no console*/
 
             // Verifica se há erro na resposta
             if (!response.ok) {
