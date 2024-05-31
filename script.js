@@ -1,3 +1,5 @@
+const dotenv = require('dotenv').config();
+
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('searchForm');
     const btnPesquisar = document.getElementById('btnpesquisar');
