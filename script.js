@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnPesquisar = document.getElementById('btnpesquisar');
     const btnLimpar = document.getElementById('btnlimpar'); // Adicionando referência ao botão Limpar
 
-    const apiKey = process.env.API_KEY; // Substitua 'SUA_CHAVE_DE_API_AQUI' pela sua chave de API
+    const apiKey = '9fb86db190a370246325de823dcb86928091858bd2a49d0646fd07a0ae7544cca50e7d52'; // Substitua 'SUA_CHAVE_DE_API_AQUI' pela sua chave de API
 
     btnPesquisar.addEventListener('click', async function(event) {
         event.preventDefault(); // Evita o comportamento padrão do botão
