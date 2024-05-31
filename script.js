@@ -1,4 +1,4 @@
-const dotenv = require('dotenv').config();
+//const dotenv = require('dotenv').config();
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('searchForm');
