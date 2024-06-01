@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Espera 5 segundos (5000 milissegundos) e então clica no segundo botão
     setTimeout(function() {
       document.getElementById("btnlimpar").click();
+        document.getElementById("SKU").focus();
     }, 7000); // 5000 milissegundos = 5 segundos
   });
 });
