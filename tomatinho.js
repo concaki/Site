@@ -1,5 +1,3 @@
-//const dotenv = require('dotenv').config();
-
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('searchForm');
     const btnPesquisar = document.getElementById('btnpesquisar');
@@ -13,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
         const SKU = document.getElementById('SKU').value;
 
         const url = `https://bling.com.br/Api/v2/produto/${SKU}/json/&apikey=${apiKey}&estoque=S&imagem=S`; // URL da requisição
-        /* console.log('URL da requisição:', url); // Imprime a URL da requisição no console */
+        console.log('URL da requisição:', url); // Imprime a URL da requisição no console
 
         try {
             const response = await fetch(url); // Faz a requisição
             const data = await response.json(); // Converte a resposta para JSON
 
-            /*console.log('Retorno JSON:', data); // Imprime o retorno JSON no console*/
+            console.log('Retorno JSON:', data); // Imprime o retorno JSON no console
 
             // Verifica se há erro na resposta
             if (!response.ok) {
@@ -40,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     document.querySelector('.img-fluid').src = produto.imagem[0].link; // Assume a primeira imagem do array de imagens
                 } else {
                     // Se não houver uma imagem, define uma imagem padrão
-                    document.querySelector('.img-fluid').src = 'https://images2.imgbox.com/84/3c/a5nx4Myf_o.png';
+                    document.querySelector('.img-fluid').src = 'https://images2.imgbox.com/2e/e2/f9OCL2X0_o.png';
                 }
 
                 // Atualiza as informações de estoque
@@ -108,4 +106,11 @@ document.addEventListener("DOMContentLoaded", function() {
             unidElement.textContent = '00 Un';
         });
     });
+  // Adiciona um ouvinte de evento de clique ao primeiro botão
+  document.getElementById("btnpesquisar").addEventListener("click", function() {
+    // Espera 5 segundos (5000 milissegundos) e então clica no segundo botão
+    setTimeout(function() {
+      document.getElementById("btnlimpar").click();
+    }, 7000); // 5000 milissegundos = 5 segundos
+  });
 });
