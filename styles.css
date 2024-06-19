@@ -1,6 +1,6 @@
 body {
-  /* background-color: black; */
-  background-image: url("Lhttps://img.freepik.com/vetores-gratis/fundo-de-tecnologia-azul-abstrato_23-2149352058.jpg");
+  background-color: black;
+  /*background-image: url("Lhttps://img.freepik.com/vetores-gratis/fundo-de-tecnologia-azul-abstrato_23-2149352058.jpg");*/
   background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
   background-position: center; /* Centraliza a imagem no fundo */
   background-repeat: no-repeat; /* Evita a repetição da imagem */
