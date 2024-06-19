@@ -1,0 +1,87 @@
+function fetchAndDisplayData(mapUrl, estacaoUrl, ids) {
+      Promise.all([
+        fetch(mapUrl).then(response => response.json()),
+        fetch(estacaoUrl).then(response => response.json())
+      ])
+        .then(([data1, data2]) => {
+          // Processa o JSON response 1
+          const rioInfo1 = data1.items[0];
+          const nivelUltFormatted = (parseFloat(rioInfo1.nivel_ult) / 100).toFixed(2); // Ajustando a unidade de cm para m e formatando para 2 casas decimais
+          document.getElementById(ids.chuva).textContent = `Chuva: ${rioInfo1.chuva_ult} mm`;
+          document.getElementById(ids.atual).textContent = `Nivel Atual: ${nivelUltFormatted} cm`;
+
+          // Processa o JSON response 2
+          const rioInfo2 = data2.items[2];
+          const nivelFormatted = (parseFloat(rioInfo2.nivel) / 100).toFixed(2); // Ajustando a unidade de cm para m e formatando para 2 casas decimais
+          const dataFormatted = rioInfo2.data.replace("T", " ").replace("Z", "");
+          document.getElementById(ids.anterior).textContent = `Leitura Anterior: ${nivelFormatted} cm`;
+          document.getElementById(ids.data).textContent = `Data e Hora: ${dataFormatted}`;
+
+          // Mostra a div inicial
+          document.getElementById("nivelRios").classList.add("active");
+        })
+        .catch(error => console.error("Erro ao buscar dados da API:", error));
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      fetchAndDisplayData(
+        "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/87444000",
+        "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87444000",
+        {
+          chuva: "chuvaguaiba",
+          atual: "atualguaiba",
+          anterior: "anteriorguaiba",
+          data: "dataguaiba"
+        }
+      );
+      fetchAndDisplayData(
+        "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/87382000",
+        "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87382000",
+        {
+          chuva: "chuvasinos",
+          atual: "atualsinos",
+          anterior: "anteriorsinos",
+          data: "datasinos"
+        }
+      );
+      fetchAndDisplayData(
+        "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/86510000",
+        "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/86510000",
+        {
+          chuva: "chuvataquari",
+          atual: "atualtaquari",
+          anterior: "anteriortaquari",
+          data: "datataquari"
+        }
+      );
+      fetchAndDisplayData(
+        "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/87270000",
+        "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87270000",
+        {
+          chuva: "chuvacai",
+          atual: "atualcai",
+          anterior: "anteriorcai",
+          data: "datacai"
+        }
+      );
+      fetchAndDisplayData(
+        "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/85400000",
+        "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/85400000",
+        {
+          chuva: "chuvajacui",
+          atual: "atualjacui",
+          anterior: "anteriorjacui",
+          data: "datajacui"
+        }
+      );
+      fetchAndDisplayData(
+        "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/87955000",
+        "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87955000",
+        {
+          chuva: "chuvalagoadospatos",
+          atual: "atuallagoadospatos",
+          anterior: "anteriorlagoadospatos",
+          data: "datalagoadospatos"
+        }
+      );
+    });
