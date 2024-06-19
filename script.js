@@ -27,7 +27,7 @@ function fetchAndDisplayDataGuaiba() {
       ); // Ajustando a unidade de cm para m e formatando para 2 casas decimais
       document.getElementById(
         "chuvaguaiba"
-      ).textContent = ` Chuva Atual: ${rioInfo1.chuva_ult} mm`;
+      ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atualguaiba"
       ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
@@ -66,7 +66,7 @@ function fetchAndDisplayDataSinos() {
       ); // Ajustando a unidade de cm para m e formatando para 2 casas decimais
       document.getElementById(
         "chuvasinos"
-      ).textContent = ` Chuva Atual: ${rioInfo1.chuva_ult} mm`;
+      ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atualsinos"
       ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
@@ -105,7 +105,7 @@ function fetchAndDisplayDataTaquari() {
       ); // Ajustando a unidade de cm para m e formatando para 2 casas decimais
       document.getElementById(
         "chuvataquari"
-      ).textContent = ` Chuva Atual: ${rioInfo1.chuva_ult} mm`;
+      ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atualtaquari"
       ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
@@ -144,7 +144,7 @@ function fetchAndDisplayDataCai() {
       ); // Ajustando a unidade de cm para m e formatando para 2 casas decimais
       document.getElementById(
         "chuvacai"
-      ).textContent = ` Chuva Atual: ${rioInfo1.chuva_ult} mm`;
+      ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atualcai"
       ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
@@ -183,7 +183,7 @@ function fetchAndDisplayDataJacui() {
       ); // Ajustando a unidade de cm para m e formatando para 2 casas decimais
       document.getElementById(
         "chuvajacui"
-      ).textContent = ` Chuva Atual: ${rioInfo1.chuva_ult} mm`;
+      ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atualjacui"
       ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
@@ -222,7 +222,7 @@ function fetchAndDisplayDataLagoaDosPatos() {
       ); // Ajustando a unidade de cm para m e formatando para 2 casas decimais
       document.getElementById(
         "chuvalagoadospatos"
-      ).textContent = ` Chuva Atual: ${rioInfo1.chuva_ult} mm`;
+      ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atuallagoadospatos"
       ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
