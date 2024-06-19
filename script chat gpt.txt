@@ -1,0 +1,50 @@
+Preciso de uma pagina html que contenha:
+
+No Cabeçalho o titulo "Enchentes RS".
+
+Utilize o FontAwesome.
+
+Utilize Bootstrap.
+
+A cor de fundo do site deve ser Preto e as letras em Branco.
+
+Um menu com 4 opções:
+-(icone de rio) Nivel dos Rios
+-(icone de telefone) Contatos de Emergencia
+-(icone de mapa) Previsao de Alagamento
+-(icone de tempo) Previsão do Tempo
+
+Cada opção do menu levará para uma div.
+
+A div que corresponde ao "Nivel dos Rios" será divida em 6 outras divs internas, cada uma para um rio diferente.
+Contendo:
+-Nome do rio (H2)
+-Local do Rio (H3)
+-espaço
+-Medição Atual (H2)
+-Nivel de Chuva (H2)
+-espaço
+-Leitura Anterior: 00M (h3)
+-Data e Hora: 00/00/0000 - 00:00 (H3)
+
+As divs dentro do "Nivel de Riso" deverão estar lado a lado até completar a tela do navegador cliente e o conteudo centralizado.
+
+Separe os Codigos HTML, CSS e JS.
+
+----------------------------------------------------------------
+
+Os 2 links abaixo me retornam json responses diferntes vamos chamar o "link1" de json response 1 e o "link2" de json response 2.
+
+link1 = https://ows.snirh.gov.br/ords/servicos/hidro/mapa/87444000
+link2 - https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87444000
+
+preciso que as devidas variaveis de cada resposta sejam exibidas como descrito abaixo:
+
+o valor da variavel "chuva_ult" no index "0" do json response 1 seja exibido no texto do H3 com id="chuvaguaiba";
+o valor da variavel "nivel_ult" no index "0" do json response 1 seja exibido no texto do H3 com id="atualguaiba";
+o valor da variavel "nivel" no index "1" do json response 2 seja exibido no texto do H5 com id"anteriorguaiba";
+o valor da variavel "data" no index "1" do json response 2 seja exibido no texto do H5 com id"dataguaiba".
+
+e para isso queria que fosse criada uma função no arquivo js.
+
+Lembrando que ja coloquei as devidas ID's na pagina html.
