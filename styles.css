@@ -45,3 +45,19 @@ body {
   flex: 1;
   text-align: center;
 }
+
+.selected-blue {
+  color: lightblue;
+}
+
+.selected-red {
+  color: red;
+}
+
+.selected-orange {
+  color: orange;
+}
+
+.selected-yellow {
+  color: yellow;
+}
