@@ -14,11 +14,11 @@ body {
 }
 
 .navbar-dark .navbar-nav .nav-link.NiveldosRios:hover {
-  color: blue;
+  color: #5fb2f5;
 }
 
 .navbar-dark .navbar-nav .nav-link.ContatosdeEmergencia:hover {
-  color: red;
+  color: #ff3636;
 }
 
 .navbar-dark .navbar-nav .nav-link.PrevisaodeAlagamento:hover {
