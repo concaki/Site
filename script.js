@@ -1,15 +1,3 @@
-/* function showDiv(divId) {
-  var contentDivs = document.getElementsByClassName("content-div");
-  for (var i = 0; i < contentDivs.length; i++) {
-    contentDivs[i].classList.remove("active");
-  }
-  document.getElementById(divId).classList.add("active");
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("nivelRios").classList.add("active");
-}); */
-
 function fetchAndDisplayDataGuaiba() {
   const url1 = "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/87444000";
   const url2 =
