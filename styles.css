@@ -52,3 +52,26 @@ body {
   flex: 1;
   text-align: center;
 }
+
+ul.list-unstyled {
+  padding-left: 0;
+}
+
+ul.list-unstyled li {
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+ul.list-unstyled li i {
+  margin-right: 10px;
+}
+
+.alert-warning {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+.alert-warning i {
+  margin-right: 10px;
+}
+
