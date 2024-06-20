@@ -89,3 +89,9 @@ ul.list-unstyled li i {
   flex-direction: column;
   align-items: flex-start;
 }
+
+hr {
+  transform: rotate(90deg);
+  width: 100px;
+  color: white;
+}
