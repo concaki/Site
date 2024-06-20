@@ -75,3 +75,17 @@ ul.list-unstyled li i {
   margin-right: 10px;
 }
 
+.content-div {
+  text-align: center;
+}
+
+.content-div .row {
+  display: flex;
+  justify-content: center;
+}
+
+.content-div .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
