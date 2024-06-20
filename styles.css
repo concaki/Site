@@ -30,11 +30,6 @@ body {
   color: yellow;
 }
 
-.content-div {
-  display: none;
-  margin-top: 20px;
-}
-
 .content-div.active {
   display: block;
 }
