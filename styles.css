@@ -90,8 +90,8 @@ ul.list-unstyled li i {
   align-items: flex-start;
 }
 
-hr {
-  transform: rotate(90deg);
-  width: 100px;
-  color: white;
+hr{
+  border-color:white;
+  box-sizing:border-box;
+  width:100%;  
 }
