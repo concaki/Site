@@ -90,7 +90,7 @@ ul.list-unstyled li i {
   align-items: flex-start;
 }
 
-hr{
+.linhabranca{
   border-color:white;
   box-sizing:border-box;
   width:100%;  
