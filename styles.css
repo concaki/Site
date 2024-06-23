@@ -95,3 +95,9 @@ ul.list-unstyled li i {
   box-sizing:border-box;
   width:100%;  
 }
+
+.textcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
