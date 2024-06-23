@@ -18,7 +18,7 @@ function fetchAndDisplayDataGuaiba() {
       ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atualguaiba"
-      ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
+      ).textContent = ` Nivel Atual: ${nivelUltFormatted} m`;
 
       // Processa o JSON response 2
       const rioInfo2 = data2.items[2];
@@ -26,7 +26,7 @@ function fetchAndDisplayDataGuaiba() {
       const dataFormatted = rioInfo2.data.replace("T", " ").replace("Z", "");
       document.getElementById(
         "anteriorguaiba"
-      ).textContent = ` Leitura Anterior: ${nivelFormatted} cm`;
+      ).textContent = ` Leitura Anterior: ${nivelFormatted} m`;
       document.getElementById(
         "dataguaiba"
       ).textContent = ` Data e Hora: ${dataFormatted}`;
@@ -57,7 +57,7 @@ function fetchAndDisplayDataSinos() {
       ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atualsinos"
-      ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
+      ).textContent = ` Nivel Atual: ${nivelUltFormatted} m`;
 
       // Processa o JSON response 2
       const rioInfo2 = data2.items[2];
@@ -65,7 +65,7 @@ function fetchAndDisplayDataSinos() {
       const dataFormatted = rioInfo2.data.replace("T", " ").replace("Z", "");
       document.getElementById(
         "anteriorsinos"
-      ).textContent = ` Leitura Anterior: ${nivelFormatted} cm`;
+      ).textContent = ` Leitura Anterior: ${nivelFormatted} m`;
       document.getElementById(
         "datasinos"
       ).textContent = ` Data e Hora: ${dataFormatted}`;
@@ -96,7 +96,7 @@ function fetchAndDisplayDataTaquari() {
       ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atualtaquari"
-      ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
+      ).textContent = ` Nivel Atual: ${nivelUltFormatted} m`;
 
       // Processa o JSON response 2
       const rioInfo2 = data2.items[2];
@@ -104,7 +104,7 @@ function fetchAndDisplayDataTaquari() {
       const dataFormatted = rioInfo2.data.replace("T", " ").replace("Z", "");
       document.getElementById(
         "anteriortaquari"
-      ).textContent = ` Leitura Anterior: ${nivelFormatted} cm`;
+      ).textContent = ` Leitura Anterior: ${nivelFormatted} m`;
       document.getElementById(
         "datataquari"
       ).textContent = ` Data e Hora: ${dataFormatted}`;
@@ -135,7 +135,7 @@ function fetchAndDisplayDataCai() {
       ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atualcai"
-      ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
+      ).textContent = ` Nivel Atual: ${nivelUltFormatted} m`;
 
       // Processa o JSON response 2
       const rioInfo2 = data2.items[2];
@@ -143,7 +143,7 @@ function fetchAndDisplayDataCai() {
       const dataFormatted = rioInfo2.data.replace("T", " ").replace("Z", "");
       document.getElementById(
         "anteriorcai"
-      ).textContent = ` Leitura Anterior: ${nivelFormatted} cm`;
+      ).textContent = ` Leitura Anterior: ${nivelFormatted} m`;
       document.getElementById(
         "datacai"
       ).textContent = ` Data e Hora: ${dataFormatted}`;
@@ -174,7 +174,7 @@ function fetchAndDisplayDataJacui() {
       ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atualjacui"
-      ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
+      ).textContent = ` Nivel Atual: ${nivelUltFormatted} m`;
 
       // Processa o JSON response 2
       const rioInfo2 = data2.items[2];
@@ -182,7 +182,7 @@ function fetchAndDisplayDataJacui() {
       const dataFormatted = rioInfo2.data.replace("T", " ").replace("Z", "");
       document.getElementById(
         "anteriorjacui"
-      ).textContent = ` Leitura Anterior: ${nivelFormatted} cm`;
+      ).textContent = ` Leitura Anterior: ${nivelFormatted} m`;
       document.getElementById(
         "datajacui"
       ).textContent = ` Data e Hora: ${dataFormatted}`;
@@ -213,7 +213,7 @@ function fetchAndDisplayDataLagoaDosPatos() {
       ).textContent = ` Chuva: ${rioInfo1.chuva_ult} mm`;
       document.getElementById(
         "atuallagoadospatos"
-      ).textContent = ` Nivel Atual: ${nivelUltFormatted} cm`;
+      ).textContent = ` Nivel Atual: ${nivelUltFormatted} m`;
 
       // Processa o JSON response 2
       const rioInfo2 = data2.items[2];
@@ -221,7 +221,7 @@ function fetchAndDisplayDataLagoaDosPatos() {
       const dataFormatted = rioInfo2.data.replace("T", " ").replace("Z", "");
       document.getElementById(
         "anteriorlagoadospatos"
-      ).textContent = ` Leitura Anterior: ${nivelFormatted} cm`;
+      ).textContent = ` Leitura Anterior: ${nivelFormatted} m`;
       document.getElementById(
         "datalagoadospatos"
       ).textContent = ` Data e Hora: ${dataFormatted}`;
