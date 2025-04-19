@@ -233,6 +233,7 @@ function carregarImagemDoRadarMeteorologico() {
     .then(res => res.json())
     .then(json => {
       const imagem = json[0].image;
+      console.log("Imagem Base64 recebida:", imagem); // <-- Aqui imprimimos no console
       document.getElementById("imagemDoRadar").src = imagem;
     })
     .catch(err => {
