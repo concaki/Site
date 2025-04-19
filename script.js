@@ -232,11 +232,15 @@ function carregarImagemDoRadarMeteorologico() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      const base64Image = data.image;
-      document.getElementById("imagemDoRadar").src = base64Image;
+      if (Array.isArray(data) && data.length > 0) {
+        const imagemBase64 = data[0].image;
+        document.getElementById("imagemDoRadar").src = imagemBase64;
+      } else {
+        console.warn("JSON vazio ou inválido.");
+      }
     })
     .catch(error => {
-      console.error("Erro ao carregar a imagem do radar:", error);
+      console.error("Erro ao carregar o JSON:", error);
     });
 }
 
