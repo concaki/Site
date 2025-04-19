@@ -226,38 +226,19 @@ function fetchAndDisplayDataLagoaDosPatos() {
     .catch((error) => console.error("Erro ao buscar dados da API:", error));
 }
 
-// --- FUNÇÕES PARA EXTRAIR IMAGENS DO BANCO DE DADOS DO RADAR METEOROLOGICO --- //
+function carregarImagemDoRadarMeteorologico() {
+  const url = "https://radar-poa-13561874921.us-east1.run.app/api/images"; // Substitua pela URL real
 
-// Função para extrair o link da imagem
-function extrairImagem(jsonData) {
-  return jsonData[0].image; // Aqui acessa o primeiro item e pega a chave "image"
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const base64Image = data.image;
+      document.getElementById("imagemDoRadar").src = base64Image;
+    })
+    .catch(error => {
+      console.error("Erro ao carregar a imagem do radar:", error);
+    });
 }
-
-// Função para atualizar o src da tag img com o link da imagem
-function atualizarImagem(imagemUrl) {
-  const imgElement = document.getElementById("imagemDoRadar");
-  imgElement.src = imagemUrl; // Atualiza o atributo src com a URL da imagem
-}
-
-// URL de onde o JSON será obtido
-const jsonUrl = "https://radar-poa-13561874921.us-east1.run.app/api/images"; // Substitua esta URL pela URL real que retorna o JSON
-
-// Função para buscar e processar o JSON
-async function carregarJSON() {
-  try {
-    const response = await fetch(jsonUrl); // Faz a requisição para a URL
-    const data = await response.json(); // Converte a resposta para JSON
-
-    // Extrai o link da imagem
-    const imagemUrl = extrairImagem(data);
-
-    // Atualiza o src da tag img com o link da imagem
-    atualizarImagem(imagemUrl);
-  } catch (error) {
-    console.error("Erro ao carregar o JSON:", error);
-  }
-}
-
 
 document.addEventListener("DOMContentLoaded", function () {
   fetchAndDisplayDataGuaiba();
@@ -266,6 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchAndDisplayDataCai();
   fetchAndDisplayDataJacui();
   fetchAndDisplayDataLagoaDosPatos();
-  carregarImagemNaDivimagemDoRadarViaJSON();
+  carregarImagemDoRadarMeteorologico();
 
 });
