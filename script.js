@@ -1,7 +1,6 @@
 function fetchAndDisplayDataGuaiba() {
   const url1 = "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/87444000";
-  const url2 =
-    "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87444000";
+  const url2 = "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87444000";
 
   Promise.all([
     fetch(url1).then((response) => response.json()),
@@ -39,8 +38,7 @@ function fetchAndDisplayDataGuaiba() {
 
 function fetchAndDisplayDataSinos() {
   const url1 = "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/87382000";
-  const url2 =
-    "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87382000";
+  const url2 = "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87382000";
 
   Promise.all([
     fetch(url1).then((response) => response.json()),
@@ -78,8 +76,7 @@ function fetchAndDisplayDataSinos() {
 
 function fetchAndDisplayDataTaquari() {
   const url1 = "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/86510000";
-  const url2 =
-    "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/86510000";
+  const url2 = "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/86510000";
 
   Promise.all([
     fetch(url1).then((response) => response.json()),
@@ -117,8 +114,7 @@ function fetchAndDisplayDataTaquari() {
 
 function fetchAndDisplayDataCai() {
   const url1 = "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/87270000";
-  const url2 =
-    "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87270000";
+  const url2 = "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87270000";
 
   Promise.all([
     fetch(url1).then((response) => response.json()),
@@ -156,8 +152,7 @@ function fetchAndDisplayDataCai() {
 
 function fetchAndDisplayDataJacui() {
   const url1 = "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/85400000";
-  const url2 =
-    "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/85400000";
+  const url2 = "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/85400000";
 
   Promise.all([
     fetch(url1).then((response) => response.json()),
@@ -195,8 +190,7 @@ function fetchAndDisplayDataJacui() {
 
 function fetchAndDisplayDataLagoaDosPatos() {
   const url1 = "https://ows.snirh.gov.br/ords/servicos/hidro/mapa/87955000";
-  const url2 =
-    "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87955000";
+  const url2 = "https://ows.snirh.gov.br/ords/servicos/hidro/estacao/24h/87955000";
 
   Promise.all([
     fetch(url1).then((response) => response.json()),
@@ -232,6 +226,39 @@ function fetchAndDisplayDataLagoaDosPatos() {
     .catch((error) => console.error("Erro ao buscar dados da API:", error));
 }
 
+// --- FUNÇÕES PARA EXTRAIR IMAGENS DO BANCO DE DADOS DO RADAR METEOROLOGICO --- //
+
+// Função para extrair o link da imagem
+function extrairImagem(jsonData) {
+  return jsonData[0].image; // Aqui acessa o primeiro item e pega a chave "image"
+}
+
+// Função para atualizar o src da tag img com o link da imagem
+function atualizarImagem(imagemUrl) {
+  const imgElement = document.getElementById("imagemDoRadar");
+  imgElement.src = imagemUrl; // Atualiza o atributo src com a URL da imagem
+}
+
+// URL de onde o JSON será obtido
+const jsonUrl = "https://radar-poa-13561874921.us-east1.run.app/api/images"; // Substitua esta URL pela URL real que retorna o JSON
+
+// Função para buscar e processar o JSON
+async function carregarJSON() {
+  try {
+    const response = await fetch(jsonUrl); // Faz a requisição para a URL
+    const data = await response.json(); // Converte a resposta para JSON
+
+    // Extrai o link da imagem
+    const imagemUrl = extrairImagem(data);
+
+    // Atualiza o src da tag img com o link da imagem
+    atualizarImagem(imagemUrl);
+  } catch (error) {
+    console.error("Erro ao carregar o JSON:", error);
+  }
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
   fetchAndDisplayDataGuaiba();
   fetchAndDisplayDataSinos();
@@ -239,4 +266,6 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchAndDisplayDataCai();
   fetchAndDisplayDataJacui();
   fetchAndDisplayDataLagoaDosPatos();
+  carregarImagemNaDivimagemDoRadarViaJSON();
+
 });
