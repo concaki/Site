@@ -227,16 +227,16 @@ function fetchAndDisplayDataLagoaDosPatos() {
 }
 
 function carregarImagemDoRadarMeteorologico() {
-  const url = "https://radar-poa-13561874921.us-east1.run.app/api/images"; // Substitua pela URL real
+  const url = "https://radar-poa-13561874921.us-east1.run.app/api/images"; // Substitua pela URL correta
 
-fetch(url)
+  fetch(url)
     .then(res => res.json())
     .then(json => {
-      const imagemBase64 = json[0].image;
-      document.getElementById("imagemDoRadar").src = imagemBase64;
+      const imagem = json[0].image;
+      document.getElementById("imagemDoRadar").src = imagem;
     })
     .catch(err => {
-      console.error("Erro ao carregar JSON:", err);
+      console.error("Erro ao carregar a imagem do radar:", err);
     });
 }
 
